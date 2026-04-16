@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0a0e1a" />
+  <meta name="description" content="Take a shot — a tiny browser hockey shootout by Herman Renden." />
+  <title>The Rink — Herman Renden</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='36' fill='%230a0e1a' stroke='%2338bdf8' stroke-width='4'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-size='44' font-family='sans-serif' font-weight='700' fill='%2338bdf8'%3EH%3C/text%3E%3C/svg%3E" />
+</head>
+<body class="rink-body">
+
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <header class="nav nav-solid">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-mono">HR</span>
+      <span class="nav-name">Herman Renden</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="rink.html" class="nav-fun nav-active" aria-current="page">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><ellipse cx="12" cy="12" rx="9" ry="4"/></svg>
+        The Rink
+      </a>
+      <a href="assets/CV-Herman-Renden-2026.docx" class="nav-cv" download>CV</a>
+    </nav>
+  </header>
+
+  <main class="rink-main">
+    <section class="rink-hero">
+      <p class="eyebrow">
+        <span class="dot-live"></span>
+        Side project · hand-built
+      </p>
+      <h1 class="rink-title">The Rink.</h1>
+      <p class="rink-sub">
+        Aim with your mouse. Click to shoot. Beat the goalie.<br />
+        <span class="rink-sub-muted">Ten shots. No do-overs. Good luck.</span>
+      </p>
+    </section>
+
+    <section class="rink-stage">
+      <div class="scoreboard" role="status" aria-live="polite">
+        <div class="sb-cell">
+          <span class="sb-label">Shots</span>
+          <span class="sb-value" id="sbShots">0<span class="sb-total">/10</span></span>
+        </div>
+        <div class="sb-cell sb-accent">
+          <span class="sb-label">Goals</span>
+          <span class="sb-value" id="sbGoals">0</span>
+        </div>
+        <div class="sb-cell">
+          <span class="sb-label">Saves</span>
+          <span class="sb-value" id="sbSaves">0</span>
+        </div>
+        <div class="sb-cell">
+          <span class="sb-label">Best streak</span>
+          <span class="sb-value" id="sbStreak">0</span>
+        </div>
+        <div class="sb-cell sb-hi">
+          <span class="sb-label">High score</span>
+          <span class="sb-value" id="sbHigh">0</span>
+        </div>
+      </div>
+
+      <div class="rink-canvas-wrap">
+        <canvas id="rink" width="900" height="500" role="img" aria-label="Hockey rink — aim with your mouse, click to shoot"></canvas>
+
+        <div class="rink-overlay" id="rinkOverlay">
+          <div class="overlay-card">
+            <h2 id="overlayTitle">Ready?</h2>
+            <p id="overlayBody">Move your mouse to aim. Click anywhere on the net to shoot. You get ten shots — try to beat the goalie.</p>
+            <button id="overlayBtn" class="btn btn-primary btn-block">Drop the puck</button>
+            <p class="overlay-fineprint">Tip — <kbd>R</kbd> resets. <kbd>Space</kbd> also shoots at your cursor.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rink-hints">
+        <span>🖱️ Aim with mouse</span>
+        <span>🖱️ Click to shoot</span>
+        <span>⌨️ <kbd>Space</kbd> to shoot · <kbd>R</kbd> to reset</span>
+      </div>
+    </section>
+
+    <section class="rink-outro">
+      <div class="outro-grid">
+        <div>
+          <h3>Why a rink?</h3>
+          <p>I grew up on the ice — Wang Sports Academy, pickup games, assistant-coaching at hockey school. When people ask what I do besides code, this is the honest answer. So: a little rink, built the same way I'd want to build anything — in plain HTML, CSS and JavaScript, no frameworks, no libraries.</p>
+        </div>
+        <div>
+          <h3>Built from scratch</h3>
+          <p>One canvas, a handful of vectors, and a goalie that gets smarter the more you score. Everything you see on this page runs in about 400 lines of vanilla JS. Open dev-tools and poke around.</p>
+          <a href="index.html#contact" class="btn btn-ghost">Back to the rest of the site →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-mono">HR</span>
+        <span>Herman Renden · Oslo, Norway</span>
+      </div>
+      <div class="footer-meta">
+        <span>Top shelf. Where mom hides the cookies.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/rink.js"></script>
+</body>
+</html>

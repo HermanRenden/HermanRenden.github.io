@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0a0e1a" />
+  <meta name="description" content="Herman Renden — Web Programming student at Niagara University. Service-industry veteran, Norwegian, hockey fan. Currently looking for opportunities." />
+  <meta property="og:title" content="Herman Renden" />
+  <meta property="og:description" content="Web Programming student. Service-industry veteran. Top-shelf hockey fan." />
+  <meta property="og:type" content="website" />
+  <title>Herman Renden — Web Programming Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='36' fill='%230a0e1a' stroke='%2338bdf8' stroke-width='4'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-size='44' font-family='sans-serif' font-weight='700' fill='%2338bdf8'%3EH%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <canvas id="aurora" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a href="#home" class="nav-brand">
+      <span class="nav-mono">HR</span>
+      <span class="nav-name">Herman Renden</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="rink.html" class="nav-fun" title="Take a shot">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><ellipse cx="12" cy="12" rx="9" ry="4"/></svg>
+        The Rink
+      </a>
+      <a href="assets/CV-Herman-Renden-2026.docx" class="nav-cv" download>CV</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow reveal">
+          <span class="dot-live"></span>
+          Open to opportunities · Based in Oslo
+        </p>
+        <h1 class="hero-title reveal">
+          <span class="title-line">Herman</span>
+          <span class="title-line title-accent">Renden.</span>
+        </h1>
+        <p class="hero-sub reveal">
+          Web Programming student. Service-industry veteran.<br />
+          Top-shelf hockey fan from <span class="hero-nor">Norge <span class="flag-no" aria-hidden="true"></span></span>.
+        </p>
+        <div class="hero-cta reveal">
+          <a href="#contact" class="btn btn-primary">
+            Get in touch
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="assets/CV-Herman-Renden-2026.docx" class="btn btn-ghost" download>
+            Download CV
+          </a>
+          <a href="rink.html" class="btn btn-fun" title="Score some goals">
+            <span>🏒</span> Visit the Rink
+          </a>
+        </div>
+        <div class="hero-meta reveal">
+          <div><strong>22</strong><span>years</span></div>
+          <div><strong>4+</strong><span>yrs in service</span></div>
+          <div><strong>2</strong><span>languages</span></div>
+          <div><strong>∞</strong><span>hockey takes</span></div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-head reveal">
+        <span class="section-num">01</span>
+        <h2>About</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="lead">
+            I'm Herman — a web programming student at <a href="https://www.niagara.edu" rel="noopener" target="_blank">Niagara University</a>, currently learning how to build things for the web while finishing my degree.
+          </p>
+          <p>
+            Before code, I spent years on the floor — stocking shelves at Rema 1000, pulling espresso and mixing drinks at a seaside restaurant in Hvaler, and assisting residents at a nursing home in Lørenskog. Those jobs taught me something that I don't think any CS course can: how to stay calm when the queue is ten deep, how to be useful without being asked, and how to actually listen.
+          </p>
+          <p>
+            Now I'm pointing that same energy at shipping clean, careful, human-feeling software. I care about details, readable code, and interfaces that don't make people feel stupid.
+          </p>
+          <div class="chip-row">
+            <span class="chip">🇳🇴 Native Norwegian</span>
+            <span class="chip">🇬🇧 Fluent English</span>
+            <span class="chip">🚗 Driver's license (B)</span>
+            <span class="chip">🏒 Assistant hockey coach</span>
+          </div>
+        </div>
+
+        <aside class="about-card reveal" aria-label="At a glance">
+          <div class="card-header">
+            <div class="monogram" aria-hidden="true">HR</div>
+            <div>
+              <div class="card-title">Herman Renden</div>
+              <div class="card-sub">Oslo, Norway · Age 22</div>
+            </div>
+          </div>
+          <dl class="card-list">
+            <div><dt>Studying</dt><dd>Web Programming</dd></div>
+            <div><dt>At</dt><dd>Niagara University</dd></div>
+            <div><dt>Since</dt><dd>2024</dd></div>
+            <div><dt>Currently</dt><dd><span class="blink">●</span> Available</dd></div>
+          </dl>
+          <a href="mailto:Herman3050@hotmail.com" class="card-cta">
+            Herman3050@hotmail.com
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section-head reveal">
+        <span class="section-num">02</span>
+        <h2>Experience</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline-item reveal" data-year="2024 – Now">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-when">2024 — Present</span>
+              <span class="timeline-badge badge-current">Current</span>
+            </div>
+            <h3>Student, Web Programming</h3>
+            <p class="timeline-where">Niagara University</p>
+            <p>Studying the fundamentals and the stack — markup, styling, scripting, backends, databases, and everything in between. This site is one of the things I built along the way.</p>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal" data-year="2023 – 2025">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-when">May 2023 — Jul 2025</span>
+              <span class="timeline-badge">Retail</span>
+            </div>
+            <h3>Store Assistant</h3>
+            <p class="timeline-where">Rema 1000 Skeidbanen</p>
+            <ul class="timeline-bullets">
+              <li>Customer service and sales on the floor</li>
+              <li>Cash handling and stock replenishment</li>
+              <li>Kept the store organized and moving during peak hours</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal" data-year="2021 – 2025">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-when">Jun 2021 — Aug 2025</span>
+              <span class="timeline-badge">Hospitality</span>
+            </div>
+            <h3>Waiter · Bartender · Barista</h3>
+            <p class="timeline-where">Big Fish Restaurant, Hvaler</p>
+            <ul class="timeline-bullets">
+              <li>High-volume service on summer weekends</li>
+              <li>Bar, espresso, and front-of-house</li>
+              <li>Made the team run smoother when it was slammed</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal" data-year="2021 – 2023">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-when">Jun 2021 — Aug 2023</span>
+              <span class="timeline-badge">Healthcare</span>
+            </div>
+            <h3>Assistant</h3>
+            <p class="timeline-where">Finstad Nursing Home, Lørenskog</p>
+            <ul class="timeline-bullets">
+              <li>Supported residents with daily care and needs</li>
+              <li>Helped staff with practical tasks around the home</li>
+              <li>Learned what patience and empathy actually look like</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="timeline-item reveal" data-year="2015 – 2021">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-when">2015 — 2021</span>
+              <span class="timeline-badge">First job</span>
+            </div>
+            <h3>Distribution Worker</h3>
+            <p class="timeline-where">OBOS Real Estate</p>
+            <p>Independent marketing distribution work — deadlines, rain or shine, from age 12. Taught me to just get things done.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="sub-head reveal">
+        <h3>Education</h3>
+      </div>
+      <div class="education-grid">
+        <div class="edu-card reveal">
+          <div class="edu-year">2024 — Present</div>
+          <div class="edu-name">Niagara University</div>
+          <div class="edu-program">Web Programming</div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-year">2019 — 2022</div>
+          <div class="edu-name">Wang Sports Academy</div>
+          <div class="edu-program">General Studies</div>
+        </div>
+        <div class="edu-card reveal">
+          <div class="edu-year">2016 — 2019</div>
+          <div class="edu-name">Brannfjell Secondary School</div>
+          <div class="edu-program">Secondary</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-head reveal">
+        <span class="section-num">03</span>
+        <h2>What I bring</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card reveal" data-skill="web">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3 4 8l4 5"/><path d="m16 3 4 5-4 5"/><path d="M14 4 10 20"/></svg>
+          </div>
+          <h3>Web development</h3>
+          <p>HTML, CSS, and JavaScript as the foundation — writing clean markup, styling without pain, and scripting interactions that feel right.</p>
+          <div class="skill-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal" data-skill="service">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
+          </div>
+          <h3>Service & customer care</h3>
+          <p>Four years across retail, hospitality, and healthcare — translating to hands-on experience with real people, real complaints, and real deadlines.</p>
+          <div class="skill-tags">
+            <span>Retail</span><span>Bar &amp; café</span><span>Elderly care</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal" data-skill="team">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Teamwork under pressure</h3>
+          <p>Sports academy, assistant hockey coaching, and shifts during the busiest summer weekends — I know when to call a play and when to shut up and skate.</p>
+          <div class="skill-tags">
+            <span>Leadership</span><span>Coaching</span><span>Calm under fire</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal" data-skill="lang">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Languages</h3>
+          <p>Native Norwegian and fluent English — comfortable switching between them at work, in emails, and with customers from anywhere.</p>
+          <div class="skill-tags">
+            <span>Norwegian</span><span>English</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal" data-skill="habits">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="M2 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="M12 18v4"/><path d="m19.07 19.07-2.83-2.83"/><path d="M22 12h-4"/><path d="m19.07 4.93-2.83 2.83"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Habits that stick</h3>
+          <p>Show up on time. Finish what I start. Leave a place better than I found it. Unsexy, but they're the ones that matter.</p>
+          <div class="skill-tags">
+            <span>Reliable</span><span>Structured</span><span>Adaptable</span>
+          </div>
+        </article>
+
+        <article class="skill-card reveal skill-fun" data-skill="hockey">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><ellipse cx="12" cy="12" rx="9" ry="4"/></svg>
+          </div>
+          <h3>The extra gear</h3>
+          <p>Hockey — years on the ice, at sports academy, and as an assistant coach at hockey school. It shaped how I train, compete, and lose gracefully.</p>
+          <div class="skill-tags">
+            <span>Ice hockey</span><span>Coaching</span><span>Sports ops</span>
+          </div>
+          <a href="rink.html" class="skill-link">Take a shot →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-head reveal">
+        <span class="section-num">04</span>
+        <h2>Get in touch</h2>
+      </div>
+
+      <div class="contact-wrap reveal">
+        <div class="contact-left">
+          <p class="contact-lede">
+            Hiring? Collaborating? Want to argue about which team is making the playoffs? The inbox is open.
+          </p>
+
+          <div class="contact-list">
+            <a href="mailto:Herman3050@hotmail.com" class="contact-row">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">Herman3050@hotmail.com</span>
+              <span class="contact-arrow">→</span>
+            </a>
+            <a href="tel:+4748028677" class="contact-row">
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">+47 48 02 86 77</span>
+              <span class="contact-arrow">→</span>
+            </a>
+            <div class="contact-row">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Skogholtveien 5E, Oslo, Norway</span>
+              <span class="contact-arrow">📍</span>
+            </div>
+            <a href="https://github.com/HermanRenden" rel="noopener" target="_blank" class="contact-row">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">@HermanRenden</span>
+              <span class="contact-arrow">↗</span>
+            </a>
+          </div>
+
+          <p class="contact-micro">References available on request.</p>
+        </div>
+
+        <div class="contact-right">
+          <div class="rink-invite">
+            <div class="rink-invite-head">
+              <span class="rink-emoji" aria-hidden="true">🏒</span>
+              <h3>One more thing</h3>
+            </div>
+            <p>If you scrolled this far, you've earned a shot on goal.</p>
+            <a href="rink.html" class="btn btn-primary btn-block">Step onto the rink →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-mono">HR</span>
+        <span>Herman Renden · Oslo, Norway</span>
+      </div>
+      <div class="footer-meta">
+        <span>Hand-built with HTML, CSS &amp; JS.</span>
+        <span>© <span id="year"></span></span>
+      </div>
+      <div class="footer-hint" aria-hidden="true">
+        psst — try the <kbd>↑</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> <kbd>←</kbd> <kbd>→</kbd> <kbd>B</kbd> <kbd>A</kbd>
+      </div>
+    </div>
+  </footer>
+
+  <div class="puck-rain" id="puckRain" aria-hidden="true"></div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
